@@ -1,8 +1,4 @@
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    music.play(music.melodyPlayable(music.knock), music.PlaybackMode.UntilDone)
-    music.play(music.createSoundEffect(WaveShape.Square, 200, 1, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
-})
-game.splash("Controls: Joystick - Move, A - Beat Drums (or play)")
+game.splash("Controls: Joystick-move")
 let mySprite = sprites.create(img`
     . . . . f f f f . . . . . 
     . . f f f f f f f f . . . 
