@@ -1,0 +1,26 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    music.play(music.melodyPlayable(music.knock), music.PlaybackMode.UntilDone)
+    music.play(music.createSoundEffect(WaveShape.Square, 200, 1, 255, 0, 100, SoundExpressionEffect.None, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
+})
+game.splash("Controls: Joystick - Move, A - Beat Drums (or play)")
+let mySprite = sprites.create(img`
+    . . . . f f f f . . . . . 
+    . . f f f f f f f f . . . 
+    . f f f f f f c f f f . . 
+    f f f f f f c c f f f c . 
+    f f f c f f f f f f f c . 
+    c c c f f f e e f f c c . 
+    f f f f f e e f f c c f . 
+    f f f b f e 3 f b f f f . 
+    . f 4 1 f 4 4 f 1 4 f . . 
+    . f e 4 4 4 4 4 4 e f . . 
+    . f f f e e e e f f f . . 
+    f e f b 7 7 7 7 b f e f . 
+    e 4 f 7 7 7 7 7 7 f 4 e . 
+    e e f 6 6 6 6 6 6 f e e . 
+    . . . f f f f f f . . . . 
+    . . . f f . . f f . . . . 
+    `, SpriteKind.Player)
+tiles.setCurrentTilemap(tilemap`level2`)
+controller.moveSprite(mySprite, 100, 100)
+scene.cameraFollowSprite(mySprite)
