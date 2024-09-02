@@ -3,7 +3,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         music.play(music.stringPlayable("A F E F D G E F ", 120), music.PlaybackMode.UntilDone)
     }
 })
-game.splash("Controls: Joystick-move")
+game.splash("Have Fun", "Use Joystick To Move")
 let mySprite = sprites.create(img`
     . . . . f f f f . . . . . 
     . . f f f f f f f f . . . 
