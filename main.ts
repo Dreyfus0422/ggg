@@ -1,3 +1,8 @@
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    for (let index = 0; index < 2; index++) {
+        music.play(music.stringPlayable("A F E F D G E F ", 120), music.PlaybackMode.UntilDone)
+    }
+})
 game.splash("Controls: Joystick-move")
 let mySprite = sprites.create(img`
     . . . . f f f f . . . . . 
@@ -20,3 +25,9 @@ let mySprite = sprites.create(img`
 tiles.setCurrentTilemap(tilemap`level2`)
 controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
+if (Math.percentChance(3)) {
+    mySprite.setVelocity(50, 50)
+    for (let index = 0; index < 4; index++) {
+        music.play(music.stringPlayable("C5 G B A F A C5 B ", 120), music.PlaybackMode.UntilDone)
+    }
+}
