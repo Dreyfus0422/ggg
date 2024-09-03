@@ -31,3 +31,4 @@ info.setScore(0)
 if (info.score() == 1222254220) {
     scene.cameraShake(5, 1000)
 }
+game.showLongText("You Have Spawned", DialogLayout.Bottom)
