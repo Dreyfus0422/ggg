@@ -23,3 +23,4 @@ let mySprite = sprites.create(img`
 tiles.setCurrentTilemap(tilemap`level2`)
 controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
+music.play(music.stringPlayable("G B A G C5 B A B ", 120), music.PlaybackMode.UntilDone)
