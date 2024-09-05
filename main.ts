@@ -28,7 +28,7 @@ controller.moveSprite(mySprite, 100, 100)
 scene.cameraFollowSprite(mySprite)
 music.play(music.stringPlayable("G B A G C5 B A B ", 120), music.PlaybackMode.UntilDone)
 info.setScore(0)
+game.showLongText("You Have Spawned", DialogLayout.Bottom)
 if (info.score() == 1222254220) {
     scene.cameraShake(5, 1000)
 }
-game.showLongText("You Have Spawned", DialogLayout.Bottom)
